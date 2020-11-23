@@ -169,23 +169,23 @@ function createConfusingSlab(ch){
 </div> `;
 
 
-//HIDE UNDEFINED RADICALS
+//HIDE UNDEFINED RADICALS ON CHARACTER SLAB
 const paragraph = document.querySelectorAll('p');
 paragraph.forEach(para =>{if (typeof para == ''){para.style.display = 'none'}   } );
 
 
 
-// //PUT conf slab in containers
+// //PUT CONF SLABS IN CONTAINERS
 
 const confcontainer = document.querySelectorAll('.confusingslabcontainer');
-confcontainer.forEach(container =>{ if (container.id.includes(ch.main))
+confcontainer.forEach(container =>{ if (container.id.includes(ch.main) && container.childElementCount < (container.id.length / 2))
     {container.innerHTML += newConfusingSlab }  } );
 
-    // document.getElementById('wrapper').innerHTML += newConfusingSlab; 
+    // document.getElementById('wrapper').innerHTML += newConfusingSlab;  DELETE DONE ABOVE
 
 };
 
-//qweqweqweqweqweqweqweqweqweqweqweqpoipoipoipoipoipoipoipoipoipoipoipipoipoipoipoipoipoipoi
+
 
 
 
@@ -231,6 +231,10 @@ console.log(simCharacterlists);
 
 setTimeout((makeConfArray), 000);
 
+
+//SPECIFIC FUNCTION TO MAKE CONFUSING CHARACTERSLAB 
+
+
 const makeConfSlabs = () => {  
 
 console.log(arrayToLoop);
@@ -261,27 +265,31 @@ setTimeout((makeConfSlabs), 000);
 
 
 
-
+//try it out//
 
 
 // //FUNCTION SHOW HIDDEN SLABS
 
 
-// const unhide = function(characterToMatch){
-//     const hiddenslab = document.getElementsByClassName('confusingslabcontainer');
-//     for(let i = 0; i < hiddenslabs.length; ++i )
-//     {if (hiddenslabs[i].style.display === "none") {hiddenslabs[i].style.display = "inline-block"}  
+const unhide = function(characterToMatch){
+    const hiddenslab = document.querySelectorAll('.confusingslabcontainer');
+
+console.log(characterToMatch);
+console.log(hiddenslab);
+hiddenslab.forEach(slab=> {if (slab.id.includes(characterToMatch)){console.log(slab.id)}})
+
+    //      if (hiddenslabs[i].style.display === "none") {hiddenslabs[i].style.display = "inline-block"}  
 //     else {
 //         hiddenslabs[i].style.display = "none";
-// }} console.log(hiddenslabs)
-// };
+// }
+};
 
 
 //ADD EVENT LISTENERS TO ALL SLABS
 document.addEventListener('click',(e)=> {  
 const characterSlabs = document.getElementsByClassName('characterslab');
 
-for (var i = 0; i < characterSlabs.length; ++i) {
+for (var i = 0; i < 1; ++i) {
     characterSlabs[i].addEventListener('click', unhide(e.target.id));
 }
 console.log(e.target.id);
