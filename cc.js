@@ -126,7 +126,7 @@ function createSlab(ch){
                 </div>
             </div>
     </div>
-    <div class="confusingslabcontainer" id="${ch.list}">
+    <div class="confusingslabcontainer" id="${ch.main}">
     </div>
     `;
 
@@ -173,12 +173,14 @@ function createConfusingSlab(ch){
 const paragraph = document.querySelectorAll('p');
 paragraph.forEach(para =>{if (typeof para == ''){para.style.display = 'none'}   } );
 
+const confcontainer = document.querySelectorAll('.confusingslabcontainer');
+confcontainer.forEach(container =>{ if (container.id.includes(ch.main)){container.innerHTML += newConfusingSlab }  } );
 
-    document.getElementById('wrapper').innerHTML += newConfusingSlab; 
+    // document.getElementById('wrapper').innerHTML += newConfusingSlab; 
 
 };
 
-
+//qweqweqweqweqweqweqweqweqweqweqweqpoipoipoipoipoipoipoipoipoipoipoipipoipoipoipoipoipoipoi
 
 
 
