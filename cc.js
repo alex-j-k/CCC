@@ -205,7 +205,7 @@ setTimeout(() => characters.forEach(array => {array.forEach(char =>createSlab(ch
 
 
 
-//SPECIFIC FUNCTION TO LOOP SIMILAR CONFUSING CHARACTERSLAB AND ADD BELOW EACH MAIN SLAB
+//SPECIFIC FUNCTION TO LOOP SIMILAR CONFUSING CHARACTERSLAB 
 let arrayToLoop = [];
 
 
@@ -222,7 +222,7 @@ console.log(simCharacterlists);
 
 
 
-setTimeout((makeConfArray), 1000);
+setTimeout((makeConfArray), 000);
 
 const makeConfSlabs = () => {  
 
@@ -241,7 +241,17 @@ arrayToLoop.forEach(singlearray => {
 }
 
 
-setTimeout((makeConfSlabs), 3000);
+setTimeout((makeConfSlabs), 000);
+
+// AND ADD BELOW EACH MAIN SLAB IN CORRECT CONF CHAR CONTAINER
+
+document.querySelectorAll('.confusingslabcontainer');
+
+
+
+
+
+
 
 // const simCharacterlists = Array.from(document.querySelectorAll('.similarList'));
 // console.log(simCharacterlists);
