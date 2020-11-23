@@ -96,7 +96,7 @@ p{
 .confusingslabcontainer{
     display: flex;
     flex-direction: column;
-    display: none;
+    display: ;
         width: 100%;
     margin-left: 80px;
 }

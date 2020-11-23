@@ -86,7 +86,7 @@ console.log(见.toString());
 const characters = [
     [喝, 曷, 渴, 揭, 歇],
     [见, 贝],
-    [见, 贝],
+    
  ];
 
 
@@ -113,7 +113,7 @@ const characters = [
 function createSlab(ch){
 
     let newSlab = `<div class="characterslab">
-                <div class="maincharacter">
+                <div class="maincharacter" id="${ch.main}">
                 <h1>${ch.main}</h1>
             </div>
             <div class="infoandlist">
@@ -126,7 +126,7 @@ function createSlab(ch){
                 </div>
             </div>
     </div>
-    <div class="confusingslabcontainer" id="${ch.main}">
+    <div class="confusingslabcontainer" id="${ch.list}">
     </div>
     `;
 
@@ -173,8 +173,13 @@ function createConfusingSlab(ch){
 const paragraph = document.querySelectorAll('p');
 paragraph.forEach(para =>{if (typeof para == ''){para.style.display = 'none'}   } );
 
+
+
+// //PUT conf slab in containers
+
 const confcontainer = document.querySelectorAll('.confusingslabcontainer');
-confcontainer.forEach(container =>{ if (container.id.includes(ch.main)){container.innerHTML += newConfusingSlab }  } );
+confcontainer.forEach(container =>{ if (container.id.includes(ch.main))
+    {container.innerHTML += newConfusingSlab }  } );
 
     // document.getElementById('wrapper').innerHTML += newConfusingSlab; 
 
@@ -236,33 +241,14 @@ arrayToLoop.forEach(singlearray => {
         if (character === ' ') {console.log('nun der')} else
         {createConfusingSlab(eval(character))}
     } 
-    
  )
 
-})
+}) 
 }
 
 
 setTimeout((makeConfSlabs), 000);
 
-// AND ADD BELOW EACH MAIN SLAB IN CORRECT CONF CHAR CONTAINER
-
-document.querySelectorAll('.confusingslabcontainer');
-
-
-
-
-
-
-
-// const simCharacterlists = Array.from(document.querySelectorAll('.similarList'));
-// console.log(simCharacterlists);
-// qwe = '';
-//  for (i = 0; i < simCharacterlists.length; ++i) {
-//  qwe.push(   Array.from(simCharacterlists[i].textContent));
-//   };
-
-//   console.log(qwe)
 
 
 
@@ -278,31 +264,27 @@ document.querySelectorAll('.confusingslabcontainer');
 
 
 
+// //FUNCTION SHOW HIDDEN SLABS
 
 
-
-
-
-//FUNCTION SHOW HIDDEN SLABS
-
-const unhide = function(characterToMatch){
-    const hiddenslabs = document.getElementsByClassName('confusingslabcontainer');
-    for(let i = 0; i < hiddenslabs.length; ++i )
-    {if (hiddenslabs[i].style.display === "none") {hiddenslabs[i].style.display = "inline-block"}  
-    else {
-        hiddenslabs[i].style.display = "none";
-}} console.log(hiddenslabs)
-};
+// const unhide = function(characterToMatch){
+//     const hiddenslab = document.getElementsByClassName('confusingslabcontainer');
+//     for(let i = 0; i < hiddenslabs.length; ++i )
+//     {if (hiddenslabs[i].style.display === "none") {hiddenslabs[i].style.display = "inline-block"}  
+//     else {
+//         hiddenslabs[i].style.display = "none";
+// }} console.log(hiddenslabs)
+// };
 
 
 //ADD EVENT LISTENERS TO ALL SLABS
-document.addEventListener('click',()=> {  
+document.addEventListener('click',(e)=> {  
 const characterSlabs = document.getElementsByClassName('characterslab');
 
 for (var i = 0; i < characterSlabs.length; ++i) {
-    characterSlabs[i].addEventListener('click', unhide);
+    characterSlabs[i].addEventListener('click', unhide(e.target.id));
 }
-console.log(characterSlabs);
+console.log(e.target.id);
 
 }
 );
