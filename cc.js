@@ -296,7 +296,7 @@ const unhide = function(characterToMatch){
 
 
 //ADD EVENT LISTENERS TO ALL SLABS
-document.addEventListener('DOMContentLoaded',()=> {  
+document.addEventListener('click',()=> {  
 const characterSlabs = document.getElementsByClassName('characterslab');
 
 for (var i = 0; i < characterSlabs.length; ++i) {
