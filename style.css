@@ -148,9 +148,14 @@ width: 100%;
 
 p{
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: ;
     margin: 0%;
     margin-left: 4%;
+}
+
+.pinyin{
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /*SLAB OF SIMILAR CHARACTERS AND CHILDREN*/
