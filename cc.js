@@ -61,8 +61,13 @@ const 衣 =  [['衣'], ['yi1'], ['Clothes']];
 
 const 巳 =  [['巳'], ['si4'], ['Self']];
 
+const 木 =  [['木'], ['mu4'], ['Tree']];
+const 戈 =  [['戈'], ['ge1'], ['Spear']];
+const 土 =  [['土'], ['tu3'], ['Soil']];
 
-
+const 忄 =  [['忄'], ['xin1'], ['heart']];
+const 车 =  [['车'], ['che1'], ['Car']];
+const 斤 =  [['斤'], ['jin1'], ['Axe']];
 
 
 const 曷rad=  [['曷'], ['he2'], ['Why?']];
@@ -109,7 +114,9 @@ const 抱 = new Character('抱', 'bao4','Embrace',['包', '抱', '拘', '句'], 
 const 拘 = new Character('拘', 'ju1','Detain',['包', '抱', '拘', '句'], [...扌],[...口],[...勹],[...N]);
 const 句 = new Character('句', 'ju4','Sentence',['包', '抱', '拘', '句'], [...口],[...勹],[...N],[...N]);
 
-
+const 裁 = new Character('裁', 'cai2','To cut',['裁', '栽', '载'], [...土],[...衣],[...戈],[...N]);
+const 栽 = new Character('栽', 'zai1','To Grow',['裁', '栽', '载'], [...土],[...木],[...戈],[...N]);
+const 载 = new Character('载', 'zai4','To Load',['裁', '栽', '载'], [...土],[...车],[...戈],[...N]);
 
 
 
@@ -121,7 +128,8 @@ const characters = [
     [蔼, 喝, 曷, 渴, 揭, 歇],
     [见, 贝],
     [哀, 衰, 衷],
-    [包, 抱, 拘, 句], 
+    [包, 抱, 拘, 句],
+    [裁, 栽, 载],
  ];
 
 
