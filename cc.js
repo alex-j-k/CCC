@@ -325,10 +325,26 @@ console.log(e.target.id);
 
 
 
+//searchPage FUNCTION
+
+// function search_page() { 
+//     let input = document.getElementById('searchbar').value 
+//     input=input.toLowerCase(); 
+//     let x = document.getElementsByClassName('rowheading'); 
+//     let y = document.getElementsByClassName('rowname'); 
+//     for (i = 0; i < x.length; i++) {  
+//         if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+//             y[i].style.display="none"; 
+//         } 
+//         else { 
+//             y[i].style.display="";                  
+//         } 
+//     } 
+// } 
 
 
 
-//PAINT MAIN CHARACTER BY PINYIN COLOUR
+//PAINT MAIN CHARACTER BY PINYIN COLOUR        STILLLLLL TOODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
 
 
