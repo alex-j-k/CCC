@@ -269,10 +269,13 @@ flex: 1;
 nav{
     height: 50px;
     font-size: 1.7em;
+    width: 100%;
 }
 
 .searchform{
     margin-top: 35px;
+    width: 100%;
+
 }
 /* EXAMPLE SLAB */
 #exslab{
