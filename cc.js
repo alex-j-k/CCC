@@ -59,6 +59,9 @@ const 一 =  [['一'], ['yi1'], ['One']];
 const 丨 =  [['丨'], ['gun3'], ['Line']];
 const 衣 =  [['衣'], ['yi1'], ['Clothes']];
 
+const 巳 =  [['巳'], ['si4'], ['Self']];
+
+
 
 
 
@@ -101,7 +104,10 @@ const 哀 = new Character('哀', 'ai1','Sorrow',['哀', '衰', '衷'], [...衣],
 const 衰 = new Character('衰', 'shuai1','Decrease',['哀', '衰', '衷'], [...衣],[...口],[...一],[...N]);
 const 衷 = new Character('衷', 'zhong1','Inner Feelings',['哀', '衰', '衷'], [...衣],[...口],[...丨],[...N]);
 
-
+const 包 = new Character('包', 'bao1','Wrap',['包', '抱', '拘', '句'], [...勹],[...巳],[...N],[...N]);
+const 抱 = new Character('抱', 'bao4','Embrace',['包', '抱', '拘', '句'], [...扌],[...巳],[...勹],[...N]);
+const 拘 = new Character('拘', 'ju1','Detain',['包', '抱', '拘', '句'], [...扌],[...口],[...勹],[...N]);
+const 句 = new Character('句', 'ju4','Sentence',['包', '抱', '拘', '句'], [...口],[...勹],[...N],[...N]);
 
 
 
@@ -115,6 +121,7 @@ const characters = [
     [蔼, 喝, 曷, 渴, 揭, 歇],
     [见, 贝],
     [哀, 衰, 衷],
+    [包, 抱, 拘, 句], 
  ];
 
 
