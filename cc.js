@@ -43,9 +43,16 @@
 
 //RADICAL CONSTANTS
 
-const 冂 = [['冂'], ['jiong1'], ['Box']];
-const 人 = [['人'], ['ren2'], ['Man']];
+const 冂 =  [['冂'], ['jiong1'], ['Box']];
+const 人 =  [['人'], ['ren2'], ['Man']];
 const 儿 =  [['儿'], ['er2'], ['Son']];
+const 口 =  [['口'], ['kou3'], ['Mouth']];
+const 勹 =  [['勹'], ['bao1'], ['Wrap']];
+const 日 =  [['日'], ['ri4'], ['Sun']];
+const 扌 =  [['扌'], ['shou3'], ['Hand']];
+const 欠 =  [['欠'], ['qian4'], ['Lack/Owe']];
+const 氵 =  [['氵'], ['shui3'], ['Water']];
+
 
 const N = ['', '', ''];
 
@@ -58,7 +65,7 @@ class Character {
         this.main = main;
         this.pinyin = pinyin;
         this.def = def;
-        this.list = list;
+        this.list = list.sort(function(a, b){return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]);  });
         this.rad1 = rad1;
         this.rad2 = rad2;
         this.rad3 = rad3;
@@ -70,11 +77,11 @@ class Character {
 
 //CHARACTER CONSTANTS
 
-const 喝 = new Character('喝', 'he1','To Drink', ['喝','曷', '渴', '揭', '歇'], [...冂],[...N],[...N],[...N]); 
-const 曷 = new Character('曷', 'he2','Why?',['喝','曷', '渴', '揭', '歇'],[...冂], [...N],[...N],[...N]);
-const 渴 = new Character('渴', 'ke3','Thirsty',['喝','曷', '渴', '揭', '歇'], [...冂],[...N],[...N],[...N]);
-const 揭 = new Character('揭', 'jie1','To Lift',['喝','曷', '渴', '揭', '歇'],[...冂],[...N],[...N],[...N]);
-const 歇 = new Character('歇', 'xie1','To Rest',['喝','曷', '渴', '揭', '歇'], [...冂],[...N],[...N],[...N]);
+const 喝 = new Character('喝', 'he1','To Drink', ['喝','曷', '渴', '揭', '歇'], [...口],[...日],[...勹],[...人]); 
+const 曷 = new Character('曷', 'he2','Why?',['喝','曷', '渴', '揭', '歇'],[...日], [...勹],[...人],[...N]);
+const 渴 = new Character('渴', 'ke3','Thirsty',['喝','曷', '渴', '揭', '歇'], [...氵],[...日],[...勹],[...人]);
+const 揭 = new Character('揭', 'jie1','To Lift',['喝','曷', '渴', '揭', '歇'],[...扌],[...日],[...勹],[...人]);
+const 歇 = new Character('歇', 'xie1','To Rest',['喝','曷', '渴', '揭', '歇'], [...日],[...勹],[...人],[...欠]);
 
 const 见 = new Character('见', 'jian4','To See',['见', '贝'], [...冂],[...儿],[...N],[...N]);
 const 贝 = new Character('贝', 'bei4','Shell',['见', '贝'], [...冂],[...人],[...N],[...N]);
@@ -133,7 +140,6 @@ function createSlab(ch){
     document.getElementById('wrapper').innerHTML += newSlab; 
 };
 
-// document.addEventListener('DOMContentLoaded',()=> createSlab());
 
 
 
@@ -181,7 +187,6 @@ const confcontainer = document.querySelectorAll('.confusingslabcontainer');
 confcontainer.forEach(container =>{ if (container.id.includes(ch.main) && container.childElementCount < (container.id.length / 2))
     {container.innerHTML += newConfusingSlab }  } );
 
-    // document.getElementById('wrapper').innerHTML += newConfusingSlab;  DELETE DONE ABOVE
 
 };
 
@@ -232,6 +237,8 @@ console.log(simCharacterlists);
 setTimeout((makeConfArray), 000);
 
 
+
+
 //SPECIFIC FUNCTION TO MAKE CONFUSING CHARACTERSLAB 
 
 
@@ -265,7 +272,6 @@ setTimeout((makeConfSlabs), 000);
 
 
 
-//try it out//
 
 
 // //FUNCTION SHOW HIDDEN SLABS
@@ -279,14 +285,7 @@ console.log(hiddenslab);
 hiddenslab.forEach(slab=> {if (slab.id.includes(characterToMatch) && slab.classList.contains(characterToMatch) && slab.style.display == 'none'){slab.style.display = 'inline-block'}
 
 else {slab.style.display = 'none'}
-
-
 })
-
-    //      if (hiddenslabs[i].style.display === "none") {hiddenslabs[i].style.display = "inline-block"}  
-//     else {
-//         hiddenslabs[i].style.display = "none";
-// }
 };
 
 
@@ -304,11 +303,23 @@ console.log(e.target.id);
 
 
 
+//SORT LISTS DISPLAYED ON CHARACTER SLABS ALPHABETICALLY PLACE MAIN CHARACTER FIRST
 
 
+const alphaSort = function(){
+    const lists = document.querySelectorAll('.similarList');
+        console.log(lists);
+        lists.forEach(list =>  console.log(list)
+        
+        ) 
+
+        
+};
 
 
+setTimeout(() => alphaSort(), 3000);
 
+// setTimeout(() => characters.forEach(array => {array.forEach(char =>createSlab(char))}), 000);
 
 
 
@@ -332,9 +343,7 @@ console.log(e.target.id);
 
 //SORT CHARACTERS BY PINYIN
 const testArray = ['歇', '曷', '喝', '渴', '揭'];
-console.log(testArray);
-testArray.sort();
-console.log(testArray);
+
 
 
 
