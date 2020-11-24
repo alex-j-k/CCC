@@ -52,6 +52,17 @@ const 日 =  [['日'], ['ri4'], ['Sun']];
 const 扌 =  [['扌'], ['shou3'], ['Hand']];
 const 欠 =  [['欠'], ['qian4'], ['Lack/Owe']];
 const 氵 =  [['氵'], ['shui3'], ['Water']];
+const 艹 =  [['艹'], ['cao3'], ['Grass']];
+const 讠 =  [['讠'], ['yan2'], ['Word']];
+
+const 一 =  [['一'], ['yi1'], ['One']];
+const 丨 =  [['丨'], ['gun3'], ['Line']];
+const 衣 =  [['衣'], ['yi1'], ['Clothes']];
+
+
+
+
+const 曷rad=  [['曷'], ['he2'], ['Why?']];
 
 
 const N = ['', '', ''];
@@ -76,23 +87,34 @@ class Character {
 
 
 //CHARACTER CONSTANTS
+const 蔼 = new Character('蔼', 'ai3','Friendly', ['蔼','喝','曷','揭', '渴', '歇'], [...讠],[...艹],[...曷rad],[...N]); 
+const 喝 = new Character('喝', 'he1','To Drink', ['蔼','喝','曷','揭', '渴', '歇'], [...口],[...日],[...勹],[...人]); 
+const 曷 = new Character('曷', 'he2','Why?',['蔼','喝','曷','揭', '渴', '歇'],[...日], [...勹],[...人],[...N]);
+const 渴 = new Character('渴', 'ke3','Thirsty',['蔼','喝','曷','揭', '渴', '歇'], [...氵],[...日],[...勹],[...人]);
+const 揭 = new Character('揭', 'jie1','To Lift',['蔼','喝','曷','揭', '渴', '歇'],[...扌],[...日],[...勹],[...人]);
+const 歇 = new Character('歇', 'xie1','To Rest',['蔼','喝','曷','揭', '渴', '歇'], [...日],[...勹],[...人],[...欠]);
 
-const 喝 = new Character('喝', 'he1','To Drink', ['喝','曷', '渴', '揭', '歇'], [...口],[...日],[...勹],[...人]); 
-const 曷 = new Character('曷', 'he2','Why?',['喝','曷', '渴', '揭', '歇'],[...日], [...勹],[...人],[...N]);
-const 渴 = new Character('渴', 'ke3','Thirsty',['喝','曷', '渴', '揭', '歇'], [...氵],[...日],[...勹],[...人]);
-const 揭 = new Character('揭', 'jie1','To Lift',['喝','曷', '渴', '揭', '歇'],[...扌],[...日],[...勹],[...人]);
-const 歇 = new Character('歇', 'xie1','To Rest',['喝','曷', '渴', '揭', '歇'], [...日],[...勹],[...人],[...欠]);
-
-const 见 = new Character('见', 'jian4','To See',['见', '贝'], [...冂],[...儿],[...N],[...N]);
 const 贝 = new Character('贝', 'bei4','Shell',['见', '贝'], [...冂],[...人],[...N],[...N]);
+const 见 = new Character('见', 'jian4','To See',['见', '贝'], [...冂],[...儿],[...N],[...N]);
+
+const 哀 = new Character('哀', 'ai1','Sorrow',['哀', '衰', '衷'], [...衣],[...口],[...N],[...N]);
+const 衰 = new Character('衰', 'shuai1','Decrease',['哀', '衰', '衷'], [...衣],[...口],[...一],[...N]);
+const 衷 = new Character('衷', 'zhong1','Inner Feelings',['哀', '衰', '衷'], [...衣],[...口],[...丨],[...N]);
+
+
+
+
+
+
+
 
 
 //ARRAY OF ALL CHARACTERS
  
 const characters = [
-    [喝, 曷, 渴, 揭, 歇],
+    [蔼, 喝, 曷, 渴, 揭, 歇],
     [见, 贝],
-    
+    [哀, 衰, 衷],
  ];
 
 
