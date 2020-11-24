@@ -20,6 +20,62 @@ body{
     
 }
 
+/* NAV */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color: cornflowerblue;
+    position: fixed;
+    height: 70px;
+    font-size: 50px;
+    z-index: 998;
+}
+
+/* SEARCH INPUT */
+.searchform{
+    margin-top: 70px;
+    background-color: grey;
+    width: 90%;
+    padding: 2% 2%;
+    position: fixed;
+    z-index: 999;
+
+}
+.searchbar{
+    width: 80%;
+    height: 50px;
+    font-size: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* EXAMPLE SLAB */
+#exslab{
+    margin-top: 23%;
+}
+
+.extext2{
+    color: green;
+    font-size: 12px;
+}
+.extext3{
+    color: rgb(212, 26, 212);
+    font-size: 12px;
+}
+.extext4{
+    color: blue;
+    font-size: 12px;
+}
+#excharacter {
+    color: rgb(187, 25, 25);
+    margin-left: 6px;
+    display: flex;
+font-size: 10px;
+text-align: center;
+align-items: center;
+}
 
 /*MAIN CHARACTER SLAB AND CHILDREN*/
 .characterslab{
@@ -55,7 +111,7 @@ body{
 h1{
 font-weight: bolder;
 transform: translateX(-5%);
-
+color: black;
 }
 
 
@@ -184,6 +240,10 @@ flex: 1;
 
 }
 
+/* EXAMPLE SLAB */
+#exslab{
+    margin-top: 27%;
+}
 
 p{
     font-size: 0.7rem;

@@ -306,18 +306,18 @@ console.log(e.target.id);
 //SORT LISTS DISPLAYED ON CHARACTER SLABS ALPHABETICALLY PLACE MAIN CHARACTER FIRST
 
 
-const alphaSort = function(){
-    const lists = document.querySelectorAll('.similarList');
-        console.log(lists);
-        lists.forEach(list =>  console.log(list)
+// const alphaSort = function(){
+//     const lists = document.querySelectorAll('.similarList');
+//         console.log(lists);
+//         lists.forEach(list =>  console.log(list)
         
-        ) 
+//         ) 
 
         
-};
+// };
 
 
-setTimeout(() => alphaSort(), 3000);
+// setTimeout(() => alphaSort(), 3000);
 
 // setTimeout(() => characters.forEach(array => {array.forEach(char =>createSlab(char))}), 000);
 
@@ -328,9 +328,17 @@ setTimeout(() => alphaSort(), 3000);
 
 
 
+//PAINT MAIN CHARACTER BY PINYIN COLOUR
 
 
 
+const colour = function(){
+    const allslab = document.querySelectorAll('.characterslab');
+    console.log(allslab);
+   allslab.forEach(slab =>{ if (slab.textContent.includes('1'))
+    {slab.style.colour = 'red'}})
+};
+setTimeout(() => colour(), 3000);
 
 
 
