@@ -69,7 +69,14 @@ const 忄 =  [['忄'], ['xin1'], ['heart']];
 const 车 =  [['车'], ['che1'], ['Car']];
 const 斤 =  [['斤'], ['jin1'], ['Axe']];
 
+const 彳 =  [['彳'], ['chi4'], ['Left Step']];
+const 七 =  [['七'], ['qi1'], ['Seven']];
+const 刀 =  [['刀'], ['dao1'], ['Knife']];
 
+
+
+
+const 穴rad=  [['穴'], ['xue2'], ['Cave']];
 const 曷rad=  [['曷'], ['he2'], ['Why?']];
 
 
@@ -118,7 +125,16 @@ const 裁 = new Character('裁', 'cai2','To cut',['裁', '栽', '载'], [...土]
 const 栽 = new Character('栽', 'zai1','To Grow',['裁', '栽', '载'], [...土],[...木],[...戈],[...N]);
 const 载 = new Character('载', 'zai4','To Load',['裁', '栽', '载'], [...土],[...车],[...戈],[...N]);
 
+const 彻 = new Character('彻', 'che4','Thorough',['彻','切', '窃'], [...彳],[...七],[...刀],[...N]);
+const 切 = new Character('切', 'qie1 (qie4)','Cut (Eager)',['彻','切', '窃'], [...七],[...刀],[...N],[...N]);
+// const 切b = new Character('切b', 'qie4','Eager',['彻'], [...七],[...刀],[...N],[...N]);
+const 窃 = new Character('窃', 'qie4','Steal',['彻','切', '窃'], [...穴rad],[...七],[...刀],[...N]);
 
+
+// const 彻 = new Character('彻', 'che4','Thorough',['彻', '切', '窃'], [...彳],[...七],[...刀],[...N]);
+// const 切a = new Character('切a', 'qie1','Cut',['彻', '切a', '切b', '窃'], [...七],[...刀],[...N],[...N]);
+// const 切b = new Character('切b ', 'qie4','eager',['彻', '切a', '切b', '窃'], [...七],[...刀],[...N],[...N]);
+// const 窃 = new Character('句', 'qie4','Steal',['彻', '切a', '切b', '窃'], [...穴rad],[...七],[...刀],[...N]);
 
 
 
@@ -130,6 +146,8 @@ const characters = [
     [哀, 衰, 衷],
     [包, 抱, 拘, 句],
     [裁, 栽, 载],
+    [彻, 切, 窃 ],
+
  ];
 
 
