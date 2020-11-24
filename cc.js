@@ -86,7 +86,6 @@ const 歇 = new Character('歇', 'xie1','To Rest',['喝','曷', '渴', '揭', '�
 const 见 = new Character('见', 'jian4','To See',['见', '贝'], [...冂],[...儿],[...N],[...N]);
 const 贝 = new Character('贝', 'bei4','Shell',['见', '贝'], [...冂],[...人],[...N],[...N]);
 
-console.log(见.toString());
 
 //ARRAY OF ALL CHARACTERS
  
@@ -125,7 +124,7 @@ function createSlab(ch){
             </div>
             <div class="infoandlist" id="${ch.main}">
                 <div class="info" id="${ch.main}">
-                    <p class="pmain" id="${ch.main}">${ch.pinyin}</p>
+                    <p class="pinyin" id="${ch.main}">${ch.pinyin}</p>
                     <p class="pmain" id="${ch.main}">${ch.def}</p>
                 </div>
                 <div class="list" id="${ch.main}">
@@ -327,20 +326,14 @@ console.log(e.target.id);
 
 //searchPage FUNCTION
 
-// function search_page() { 
-//     let input = document.getElementById('searchbar').value 
-//     input=input.toLowerCase(); 
-//     let x = document.getElementsByClassName('rowheading'); 
-//     let y = document.getElementsByClassName('rowname'); 
-//     for (i = 0; i < x.length; i++) {  
-//         if (!x[i].innerHTML.toLowerCase().includes(input)) { 
-//             y[i].style.display="none"; 
-//         } 
-//         else { 
-//             y[i].style.display="";                  
-//         } 
-//     } 
-// } 
+function searchPage() { 
+    let input = document.getElementById('searchbar').value;
+    input=input.toLowerCase(); 
+    let x = document.querySelectorAll('.pinyin'); 
+    let y = document.getElementsByClassName('characterslab'); 
+    x.forEach(thing => {if (thing.textContent.includes(input)){thing.parentElement.parentElement.parentElement.style.display = '' } else 
+    {thing.parentElement.parentElement.parentElement.style.display = 'none'}
+} )};
 
 
 

@@ -94,6 +94,10 @@ align-items: center;
     
 }
 
+.pinyin{
+    font-size: 1.3rem;
+}
+
 .maincharacter{
     display: flex;
     min-height: 90px;
@@ -250,7 +254,7 @@ nav{
 }
 /* EXAMPLE SLAB */
 #exslab{
-    margin-top: 36%;
+    margin-top: 37%;
 }
 
 p{
