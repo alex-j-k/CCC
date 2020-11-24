@@ -130,7 +130,7 @@ align-items: center;
 }
 
 h1{
-font-weight: bolder;
+font-weight: normal;
 transform: translateX(-5%);
 color: black;
 }
