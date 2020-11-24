@@ -112,21 +112,21 @@ const characters = [
 //GENERIC FUNCTION TO CREATE NEW CHARCTER INFORMATION SLAB
 function createSlab(ch){
 
-    let newSlab = `<div class="characterslab">
+    let newSlab = `<div class="characterslab" id="${ch.main}">
                 <div class="maincharacter" id="${ch.main}">
-                <h1>${ch.main}</h1>
+                <h1 id="${ch.main}">${ch.main}</h1>
             </div>
-            <div class="infoandlist">
-                <div class="info">
-                    <p class="pmain">${ch.pinyin}</p>
-                    <p class="pmain">${ch.def}</p>
+            <div class="infoandlist" id="${ch.main}">
+                <div class="info" id="${ch.main}">
+                    <p class="pmain" id="${ch.main}">${ch.pinyin}</p>
+                    <p class="pmain" id="${ch.main}">${ch.def}</p>
                 </div>
-                <div class="list">
-                    <p class="pmain similarList"> ${ch.list.join(' ')}</p>
+                <div class="list" id="${ch.main}">
+                    <p class="pmain similarList" id="${ch.main}"> ${ch.list.join(' ')}</p>
                 </div>
             </div>
     </div>
-    <div class="confusingslabcontainer" id="${ch.list}">
+    <div class="confusingslabcontainer ${ch.main}" id="${ch.list}">
     </div>
     `;
 
@@ -276,7 +276,12 @@ const unhide = function(characterToMatch){
 
 console.log(characterToMatch);
 console.log(hiddenslab);
-hiddenslab.forEach(slab=> {if (slab.id.includes(characterToMatch)){console.log(slab.id)}})
+hiddenslab.forEach(slab=> {if (slab.id.includes(characterToMatch) && slab.classList.contains(characterToMatch) && slab.style.display == 'none'){slab.style.display = 'inline-block'}
+
+else {slab.style.display = 'none'}
+
+
+})
 
     //      if (hiddenslabs[i].style.display === "none") {hiddenslabs[i].style.display = "inline-block"}  
 //     else {
