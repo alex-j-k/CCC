@@ -54,16 +54,16 @@ nav{
     background-color: grey;
     width: 90%;
     padding: 0% 0%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     position: fixed;
     z-index: 999;
 
 }
 .searchbar{
     width: 80%;
-    height: 50px;
-    font-size: 18px;
+    height: 40px;
+    font-size: 16px;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -279,7 +279,7 @@ nav{
 }
 /* EXAMPLE SLAB */
 #exslab{
-    margin-top: 28%;
+    margin-top: 35%;
 }
 
 p{
